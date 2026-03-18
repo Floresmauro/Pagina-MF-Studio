@@ -749,8 +749,23 @@ ul {
 }
 
 .tech-logo {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.tech-brand-img {
+  max-width: 80%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.05));
+  transition: transform var(--transition-med);
+}
+
+.tech-card:hover .tech-brand-img {
+  transform: scale(1.05);
 }
 
 .tech-card h4 {
