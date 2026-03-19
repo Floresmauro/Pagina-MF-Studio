@@ -103,6 +103,11 @@ ul {
   background-clip: text;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
 .section-tag {
   display: inline-flex;
   align-items: center;
@@ -1118,6 +1123,10 @@ ul {
     margin: 0 auto
   }
 
+  .detail-features.three-col {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
   .detail-visual {
     max-width: 560px;
     margin: 0 auto
@@ -1202,6 +1211,33 @@ ul {
   .whatsapp-float svg {
     width: 26px;
     height: 26px;
+  }
+}
+
+@media(max-width:576px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+  }
+
+  .footer-brand+p {
+    margin: 0 auto 1.5rem;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .detail-content h2 {
+    font-size: 1.8rem;
   }
 }
 
