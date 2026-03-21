@@ -16,8 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('navLinks');
 
   hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
     hamburger.classList.toggle('active');
-    navLinks.classList.toggle('open');
+    document.body.classList.toggle('menu-open', isOpen);
   });
 
   // Close mobile menu on link click
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
       navLinks.classList.remove('open');
+      document.body.classList.remove('menu-open');
     });
   });
 
