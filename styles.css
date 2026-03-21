@@ -67,6 +67,9 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 a {
@@ -103,8 +106,9 @@ ul {
   background-clip: text;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p, span, li {
   overflow-wrap: break-word;
+  word-wrap: break-word;
   hyphens: auto;
 }
 
@@ -1247,6 +1251,33 @@ body.menu-open {
   
   .detail-content h2 {
     font-size: 1.8rem;
+  }
+}
+
+@media(max-width:414px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .sol-card, .tech-card, .case-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .detail-content h2 {
+    font-size: 1.6rem;
   }
 }
 
