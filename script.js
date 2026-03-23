@@ -16,9 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('navLinks');
 
   hamburger.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
     hamburger.classList.toggle('active');
-    document.body.classList.toggle('menu-open', isOpen);
+    const isNowOpen = navLinks.classList.toggle('open');
+    document.documentElement.classList.toggle('menu-open', isNowOpen);
+    document.body.classList.toggle('menu-open', isNowOpen);
   });
 
   // Close mobile menu on link click
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
       navLinks.classList.remove('open');
+      document.documentElement.classList.remove('menu-open');
       document.body.classList.remove('menu-open');
     });
   });
