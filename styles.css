@@ -867,8 +867,17 @@ body.menu-open {
 }
 
 .case-emoji {
-  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.case-emoji svg {
+  width: 48px;
+  height: 48px;
 }
 
 .case-card h4 {
@@ -885,10 +894,11 @@ body.menu-open {
 }
 
 .case-icon {
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   border-radius: 10px;
+  transform: scale(1.4);
 }
 
 /* ---------- ABOUT ---------- */
