@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6, p, span, li {
   height: 28px;
   object-fit: contain;
   vertical-align: middle;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .section-title {
@@ -253,7 +253,7 @@ h1, h2, h3, h4, h5, h6, p, span, li {
   width: 126px;
   height: 126px;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
 }
 
 .nav-links {
@@ -601,7 +601,7 @@ body.menu-open {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .sol-card h3 {
@@ -735,7 +735,7 @@ body.menu-open {
   max-height: 100%;
   object-fit: contain;
   transition: transform var(--transition-med);
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .detail-feat:hover .feat-brand-img {
@@ -819,7 +819,7 @@ body.menu-open {
   object-fit: contain;
   filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.05));
   transition: transform var(--transition-med);
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .tech-card:hover .tech-brand-img {
@@ -885,7 +885,7 @@ body.menu-open {
   width: 36px;
   height: 36px;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 /* ---------- ABOUT ---------- */
@@ -1063,7 +1063,7 @@ body.menu-open {
   width: 108px;
   height: 108px;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
 }
 
 .footer-brand+p {
