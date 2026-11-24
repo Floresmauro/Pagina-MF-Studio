@@ -49,10 +49,30 @@ document.addEventListener('DOMContentLoaded', () => {
   reveals.forEach(el => revealObserver.observe(el));
 
   // ── Stagger siblings (cards, tech items) ──
-  document.querySelectorAll('.sol-grid, .tech-grid, .cases-grid').forEach(grid => {
+  document.querySelectorAll('.sol-grid, .tech-grid, .cases-grid, .pricing-grid, .hardware-grid').forEach(grid => {
     const children = grid.querySelectorAll('.reveal');
     children.forEach((child, i) => {
       child.style.transitionDelay = `${i * 0.12}s`;
+    });
+  });
+
+  // ── FAQ Accordion ──
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.closest('.faq-item');
+      const isAlreadyActive = item.classList.contains('active');
+      
+      // Close other open FAQs
+      document.querySelectorAll('.faq-item').forEach(other => {
+        other.classList.remove('active');
+        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle current
+      if (!isAlreadyActive) {
+        item.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 
